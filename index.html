@@ -16,8 +16,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #1a1a1a; /* 深灰色背景 */
+            color: #e0e0e0; /* 浅灰色文字 */
             line-height: 1.6;
         }
 
@@ -28,14 +28,14 @@
 
         /* 头部样式 */
         .header {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
-            color: white;
+            background: linear-gradient(135deg, #8b3d3d, #8b5a3c); /* 更深的暖色调 */
+            color: #f0f0f0;
             padding: 20px 15px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
         }
 
         .logo {
@@ -52,9 +52,9 @@
 
         /* 分类标签 */
         .tags-container {
-            background: white;
+            background: #2d2d2d; /* 深色背景 */
             padding: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             position: sticky;
             top: 80px;
             z-index: 90;
@@ -62,33 +62,28 @@
 
         .tags {
             display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 10px;
-            padding-bottom: 5px;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .tags::-webkit-scrollbar {
-            display: none;
+            flex-wrap: wrap; /* 允许换行 */
+            gap: 8px; /* 减小间距 */
+            justify-content: center; /* 居中对齐 */
         }
 
         .tag {
-            background: #f5f5f5;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            white-space: nowrap;
+            background: #3d3d3d; /* 深色标签背景 */
+            color: #d0d0d0; /* 浅色文字 */
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 13px;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: 1px solid #eee;
+            border: 1px solid #4d4d4d;
+            white-space: nowrap;
         }
 
+
         .tag.active {
-            background: #ff6b6b;
-            color: white;
-            box-shadow: 0 3px 8px rgba(255, 107, 107, 0.3);
+            background: #8b3d3d; /* 深红色激活状态 */
+            color: #ffffff;
+            box-shadow: 0 3px 8px rgba(139, 61, 61, 0.5);
         }
 
         /* 作品展示区域 */
@@ -127,11 +122,12 @@
             margin-bottom: 20px;
         }
 
+        /* 图片项目 */
         .image-item {
             position: relative;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             aspect-ratio: 1/1;
             cursor: pointer;
@@ -139,7 +135,7 @@
 
         .image-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .image-item img {
@@ -152,16 +148,16 @@
 
         /* 分类说明 */
         .category-info {
-            background: white;
+            background: #2d2d2d; /* 深色背景 */
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             margin-top: 10px;
         }
 
         .category-info p {
             font-size: 14px;
-            color: #666;
+            color: #b0b0b0; /* 更浅的文字颜色 */
             margin-bottom: 8px;
         }
 
@@ -169,11 +165,11 @@
         .footer {
             text-align: center;
             padding: 25px 15px;
-            color: #888;
+            color: #a0a0a0; /* 浅灰色文字 */
             font-size: 14px;
-            background: white;
+            background: #2d2d2d; /* 深色背景 */
             margin-top: 20px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #444;
         }
 
         .contact-info {
@@ -741,17 +737,20 @@
     <div class="category-section" id="update-notes">
         <h2 class="category-title">更新说明</h2>
         <div class="category-info">
-            <p><strong>最新更新时间：</strong>2025年11月22日</p>
-            <p><strong>版本：</strong>v2.0</p>
+            <p><strong>最新更新时间：</strong>2025年11月24日</p>
+            <p><strong>版本：</strong>v1.1</p>
 
-            <h3 style="margin: 15px 0 10px; color: #ff6b6b;">更新内容</h3>
+            <h3 style="margin: 15px 0 10px; color: #ff6b6b;">更新说明</h3>
             <ul style="text-align: left; padding-left: 20px; margin-bottom: 15px;">
                 <li>历时9天共计整理往期所有实拍视频资源约6500余部。</li>
                 <li>清除大量720P分辨率以下视频、画面重影、时长小于30秒（较少保留）、老旧、重复等等视频资源。</li>
                 <li>除候车室、试鞋、草地公园、职业装、地铁公交、亲自游乐园外，其余不再按场景分类，统一分类为户外实拍，后进行裸丝分类。</li>
                 <li>m2t视频格式网盘无法识别，已全部更改为mp4格式。</li>
-                <li>改善移动端适配效果。</li>
-                <li>修复已知的页面显示问题。</li>
+                <li>修改页面背景色以防止夜间过亮。</li>
+                <li>目前仅为资源目录展示的静态页面使用，因没有配置服务器导致图片加载速度较慢，请谅解。</li>
+                <li>图片为压缩后的略缩图，分辨率较低。</li>
+                <li>所用工具：Bulk Rename Utility(重命名工具)；Duplicate Cleaner 5（查重工具）；WebStorm 2.4；GitHub Desktop；</li>
+                <li>部署于GitHub Pages。</li>
             </ul>
 
             <h3 style="margin: 15px 0 10px; color: #ff6b6b;">未来计划</h3>
